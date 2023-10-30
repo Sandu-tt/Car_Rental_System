@@ -12,12 +12,23 @@
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
+/* Error */
+
+.control-error {
+    color: var(--color-primary);
+    font-size: 0.9em;
+}
+
 /*section */
 .sectionBorder {
     box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
     border-radius: 8px;
 }
 
+
+:root {
+    scroll-behavior: smooth;
+}
 
 
 /*main*/
