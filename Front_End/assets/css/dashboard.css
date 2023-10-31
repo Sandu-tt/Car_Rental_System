@@ -47,3 +47,16 @@ h6 {
         padding: 20px;
     }
 }
+
+/*added page title */
+
+.pageTitle {
+    margin-bottom: 10px;
+}
+
+.pageTitle h1 {
+    font-size: 24px;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #012970;
+}
