@@ -266,5 +266,381 @@
                 </li>
             </ul>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-layout-text-window-reverse"></i><span>Details</span><i
+                    class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="adminPages/PaymentDetails.html">
+                        <i class="bi bi-circle"></i><span>Payment Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="adminPages/RentDetails.html">
+                        <i class="bi bi-circle"></i><span>Rent Details</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End View Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="adminPages/CusomerRequest.html" id="myDetailsSection">
+                <i class="bi bi-kanban"></i>
+                <span>Rent Request</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="adminPages/IncomeDetails.html" id="incomeDetails">
+                <i class="bi bi-kanban"></i>
+                <span>Income Details</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="login.html">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>LogOut</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<!-- ======= Main ======= -->
+<main id="main" class="main">
+
+    <div class="pageTitle" id="pageOne">
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="adminDashboard.html">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- End Page Title -->
+    <section class="section dashboard">
+        <div class="row">
+
+            <!-- Left side columns -->
+            <div class="col-lg-8">
+                <div class="row">
+
+                    <!-- Car Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card car-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Cars <span>| All Type</span></h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-car-front-fill"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="carCount">0</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Car Card -->
+
+                    <!-- Available Car Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card car-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Available Cars <span>| Today</span></h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-car-front-fill"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="availableCarCount">0</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Car Card -->
+
+                    <!-- Reserved Car Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card car-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Reserved Cars <span>| Today</span></h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-car-front-fill"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="reservedCarCount">0</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Car Card -->
+
+                    <!-- Drivers Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card driver-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Driver <span>| All Type</span></h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="driverCount">0</h6>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End Drivers Card -->
+
+                    <!-- Available Drivers Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card driver-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Available Driver <span>| Today</span></h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="availableDriverCount">0</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Drivers Card -->
+
+                    <!-- UnAvailable Drivers Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card driver-card">
+                            <div class="card-body">
+                                <h5 class="card-title">UnAvailable Driver <span>| Today</span></h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="unAvailableDriverCount">0</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Drivers Card -->
+
+                    <!-- Customers Card -->
+                    <div class="col-xxl-4 col-xl-6">
+                        <div class="card info-card customers-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Customers <span>| All Type</span></h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="customerCount">0</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Customers Card -->
+
+                    <!-- Maintain Cars Card -->
+                    <div class="col-xxl-4 col-xl-6">
+                        <div class="card info-card maintain-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Maintain Cars <span>| Today</span></h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="maintainCarCount">0</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Maintain Cars Card -->
+
+                    <!-- Under Maintain  Card -->
+                    <div class="col-xxl-4 col-xl-6">
+                        <div class="card info-card maintain-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Under Maintain Cars <span>| Today</span></h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="underMaintainCarCount">0</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Under Maintain Card -->
+
+                    <!-- Booking  Card -->
+                    <div class="col-xxl-4 col-xl-6">
+                        <div class="card info-card booking-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Booking<span>| All Type</span></h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="BookingCount">0</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Booking Card -->
+
+                    <!-- Booking Pending Today Card -->
+                    <div class="col-xxl-4 col-xl-6">
+                        <div class="card info-card booking-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Booking Pending<span>| Today</span></h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="BookingPendingCount">0</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Booking Today Card -->
+
+                    <!-- Booking Pending Active Card -->
+                    <div class="col-xxl-4 col-xl-6">
+                        <div class="card info-card booking-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Booking Active <span>| Today</span></h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 id="BookingActiveCount">0</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Booking Active Card -->
+
+                </div>
+            </div>
+            <!-- End Left side columns -->
+
+            <!-- Right side columns -->
+            <div class="col-lg-4">
+
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="filter">
+                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                            <li class="dropdown-header text-start">
+                                <h6>Filter</h6>
+                            </li>
+
+                            <li><a class="dropdown-item" href="#">Today</a></li>
+                            <li><a class="dropdown-item" href="#">This Month</a></li>
+                            <li><a class="dropdown-item" href="#">This Year</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Recent Activity <span>| Today</span></h5>
+
+                        <div class="activity">
+
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">40 min</div>
+                                <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                                <div class="activity-content">
+                                    Add New Car <a href="#" class="fw-bold text-dark">Brand BMW</a>
+                                </div>
+                            </div>
+                            <!-- End activity item-->
+
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">56 min</div>
+                                <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                                <div class="activity-content">
+                                    C00-002 Customer Rent CAR-003
+                                </div>
+                            </div>
+                            <!-- End activity item-->
+
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">2 hrs</div>
+                                <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
+                                <div class="activity-content">
+                                    C00-010 Customer Rent CAR-007
+                                </div>
+                            </div>
+                            <!-- End activity item-->
+
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">40 min</div>
+                                <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                                <div class="activity-content">
+                                    Add New Car <a href="#" class="fw-bold text-dark">Brand Banz</a>
+                                </div>
+                            </div>
+                            <!-- End activity item-->
+
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">2 days</div>
+                                <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
+                                <div class="activity-content">
+                                    C00-012 Customer Request a Rent CRI-007 Car.
+                                </div>
+                            </div>
+                            <!-- End activity item-->
+
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">2 Days</div>
+                                <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                                <div class="activity-content">
+                                    Add New Car <a href="#" class="fw-bold text-dark">Brand Banz</a>
+                                </div>
+                            </div>
+                            <!-- End activity item-->
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End Recent Activity -->
+
+            </div>
+            <!-- End Right side columns -->
+        </div>
+    </section>
+</main>
 </body>
 </html>
