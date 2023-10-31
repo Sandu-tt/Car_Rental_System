@@ -33,3 +33,17 @@ h6 {
     color: #ce1212;
     font-size: 1em;
 }
+
+/*main section*/
+
+#main {
+    margin-top: 60px;
+    padding: 20px 30px;
+    transition: all 0.3s;
+}
+
+@media (max-width: 1199px) {
+    #main {
+        padding: 20px;
+    }
+}
