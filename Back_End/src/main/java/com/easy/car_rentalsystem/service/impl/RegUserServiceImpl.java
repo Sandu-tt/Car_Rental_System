@@ -1,5 +1,11 @@
 package com.easy.car_rentalsystem.service.impl;
 
+import com.easy.car_rentalsystem.dto.CustomDTO;
+import com.easy.car_rentalsystem.dto.RegUserDTO;
+import com.easy.car_rentalsystem.entity.RegUser;
+import com.easy.car_rentalsystem.entity.User;
+import com.easy.car_rentalsystem.enums.RoleType;
+import com.easy.car_rentalsystem.repo.RegUserRepo;
 import com.easy.car_rentalsystem.service.RegUserService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -22,14 +28,14 @@ import java.util.ArrayList;
 public class RegUserServiceImpl implements RegUserService {
 
     @Autowired
-    private Reg_UserRepo repo;
+    private RegUserRepo repo;
     @Autowired
     private ModelMapper mapper;
 
     @Override
-    public void saveUser(Reg_UserDTO dto) {
+    public void saveUser(RegUserDTO dto) {
 
-        Reg_User regUser = new Reg_User(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic(), dto.getLicense_No(), "", "", new User(dto.getUser().getUser_Id(), dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
+        RegUser regUser = new RegUser(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic(), dto.getLicense_No(), "", "", new User(dto.getUser().getUser_Id(), dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
         if (repo.existsById(dto.getUser_Id()))
             throw new RuntimeException("User Already Exist. Please enter another id..!");
 
@@ -56,9 +62,9 @@ public class RegUserServiceImpl implements RegUserService {
     }
 
     @Override
-    public void updateUser(Reg_UserDTO dto) {
+    public void updateUser(RegUserDTO dto) {
 
-        Reg_User regUser = new Reg_User(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic(), dto.getLicense_No(), "", "", new User(dto.getUser().getUser_Id(), dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
+        RegUser regUser = new RegUser(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic(), dto.getLicense_No(), "", "", new User(dto.getUser().getUser_Id(), dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
         if (!repo.existsById(dto.getUser_Id())) {
             throw new RuntimeException("User Not Exist. Please enter Valid id..!");
         }
@@ -95,8 +101,8 @@ public class RegUserServiceImpl implements RegUserService {
     }
 
     @Override
-    public ArrayList<Reg_UserDTO> getAllUser() {
-        return mapper.map(repo.findAll(), new TypeToken<ArrayList<Reg_User>>() {
+    public ArrayList<RegUserDTO> getAllUser() {
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<RegUser>>() {
         }.getType());
     }
 
@@ -106,12 +112,12 @@ public class RegUserServiceImpl implements RegUserService {
     }
 
     @Override
-    public Reg_User searchUserId(String id) {
+    public RegUser searchUserId(String id) {
         if (!repo.existsById(id)) {
             throw new RuntimeException("Wrong ID. Please enter Valid id..!");
         }
         System.out.println(id);
-        return mapper.map(repo.findById(id).get(), Reg_User.class);
+        return mapper.map(repo.findById(id).get(), RegUser.class);
     }
 
     @Override
@@ -120,7 +126,7 @@ public class RegUserServiceImpl implements RegUserService {
     }
 
     @Override
-    public Reg_UserDTO availableUser(String userName) {
+    public RegUserDTO availableUser(String userName) {
         return repo.availableUser(userName);
     }
 

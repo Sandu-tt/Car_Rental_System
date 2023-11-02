@@ -5,6 +5,7 @@ import com.easy.car_rentalsystem.dto.CustomDTO;
 import com.easy.car_rentalsystem.entity.Car;
 import com.easy.car_rentalsystem.repo.CarRepo;
 import com.easy.car_rentalsystem.service.CarService;
+import embeded.Image;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;

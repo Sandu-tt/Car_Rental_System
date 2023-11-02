@@ -3,7 +3,10 @@ package com.easy.car_rentalsystem.service.impl;
 import com.easy.car_rentalsystem.dto.CustomDTO;
 import com.easy.car_rentalsystem.dto.DriverDTO;
 import com.easy.car_rentalsystem.entity.Driver;
+import com.easy.car_rentalsystem.entity.User;
+import com.easy.car_rentalsystem.repo.DriverRepo;
 import com.easy.car_rentalsystem.service.DriverService;
+import lombok.val;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +36,9 @@ public class DriverServiceImpl implements DriverService {
     @Override
     public void saveDriver(DriverDTO dto) {
 
-        Driver driver = new Driver(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic_No(), dto.getLicense_No(), "", dto.getDriverAvailability(), new User(dto.getUser().getUser_Id(), dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
+        final Driver driver = new Driver(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic_No(),
+                dto.getLicense_No(), "", dto.getDriverAvailability(), new User(dto.getUser().getUser_Id(),
+                dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
         System.out.println(driver);
         if (repo.existsById(dto.getUser_Id()))
             throw new RuntimeException("Driver Already Exist. Please enter another id..!");

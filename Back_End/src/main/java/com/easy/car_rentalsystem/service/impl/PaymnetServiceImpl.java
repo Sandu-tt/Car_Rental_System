@@ -2,6 +2,7 @@ package com.easy.car_rentalsystem.service.impl;
 
 import com.easy.car_rentalsystem.dto.CustomDTO;
 import com.easy.car_rentalsystem.dto.PaymentDTO;
+import com.easy.car_rentalsystem.entity.Car;
 import com.easy.car_rentalsystem.entity.Driver;
 import com.easy.car_rentalsystem.entity.Payment;
 import com.easy.car_rentalsystem.entity.Rent;
@@ -17,6 +18,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+
+import static com.easy.car_rentalsystem.enums.AvailabilityType.AVAILABLE;
+import static com.easy.car_rentalsystem.enums.AvailabilityType.UNDER_MAINTAIN;
+import static com.easy.car_rentalsystem.enums.RentRequest.PAY;
 
 /**
  * @author : SANDU

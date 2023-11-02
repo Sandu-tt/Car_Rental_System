@@ -1,5 +1,15 @@
 package com.easy.car_rentalsystem.service.impl;
 
+import com.easy.car_rentalsystem.dto.CustomDTO;
+import com.easy.car_rentalsystem.dto.RentDTO;
+import com.easy.car_rentalsystem.entity.Car;
+import com.easy.car_rentalsystem.entity.Driver;
+import com.easy.car_rentalsystem.entity.Rent;
+import com.easy.car_rentalsystem.entity.RentDetails;
+import com.easy.car_rentalsystem.enums.RequestType;
+import com.easy.car_rentalsystem.repo.CarRepo;
+import com.easy.car_rentalsystem.repo.DriverRepo;
+import com.easy.car_rentalsystem.repo.RentRepo;
 import com.easy.car_rentalsystem.service.RentService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -8,6 +18,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import static com.easy.car_rentalsystem.enums.AvailabilityType.AVAILABLE;
+import static com.easy.car_rentalsystem.enums.AvailabilityType.UNAVAILABLE;
+import static com.easy.car_rentalsystem.enums.RentRequest.CONFORM;
+import static com.easy.car_rentalsystem.enums.RentRequest.REJECT;
 
 /**
  * @author : SANDU

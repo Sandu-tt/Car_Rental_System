@@ -1,20 +1,20 @@
 package com.easy.car_rentalsystem.entity;
 
+
+
+/**
+ * @author : SANDU
+ * @project Car_Rental_System**/
+
 import com.easy.car_rentalsystem.enums.RoleType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-/**
- * @author : SANDU
- * @project Car_Rental_System
- */
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -33,4 +33,6 @@ public class User {
         this.user_Name = user_Name;
         this.password = password;
     }
+
+
 }
