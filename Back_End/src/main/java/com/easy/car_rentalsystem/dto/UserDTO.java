@@ -5,6 +5,7 @@ package com.easy.car_rentalsystem.dto;
  * @project Car_Rental_System
  */
 
+import com.easy.car_rentalsystem.enums.RoleType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
