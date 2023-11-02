@@ -1,5 +1,11 @@
 package com.easy.car_rentalsystem.dto;
 
+import com.easy.car_rentalsystem.enums.AvailabilityType;
+import com.easy.car_rentalsystem.enums.CarType;
+import com.easy.car_rentalsystem.enums.FuelType;
+import com.easy.car_rentalsystem.enums.TransmissionType;
+import embeded.ImageDTO;
+import embeded.Rate;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,7 +27,7 @@ public class CarDTO {
     private String name;
     private String brand;
     private CarType type;
-
+    private ImageDTO image;
     private int number_Of_Passengers;
     private TransmissionType transmission_Type;
     private FuelType fuel_Type;
