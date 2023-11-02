@@ -6,8 +6,8 @@ package com.easy.car_rentalsystem.controller;
  */
 
 
-import com.easy.car_rental.service.AdminService;
 import com.easy.car_rentalsystem.dto.AdminDTO;
+import com.easy.car_rentalsystem.service.AdminService;
 import com.easy.car_rentalsystem.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
